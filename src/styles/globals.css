@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'MavenPro'; /*Can be any text*/
+  src: local('maven-pro-regular'),
+    url('./fonts/maven-pro-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MavenPro-Bold'; /*Can be any text*/
+  src: local('maven-pro-bold'),
+    url('./fonts/maven-pro-bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MavenPro-Medium'; /*Can be any text*/
+  src: local('maven-pro-medium'),
+    url('./fonts/maven-pro-medium.ttf') format('truetype');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  color: black;
+  /* font-family: 'Maven Pro-Bold'; */
+}
+
+line {
+  color: unset;
+}
