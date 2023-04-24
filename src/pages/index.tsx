@@ -12,6 +12,39 @@ import { Button } from '../components/button'
 import { Carousel, SecondCarousel } from 'components/carousel'
 import { theme } from 'utils/theme'
 
+type RoomAndTitle = {
+  title: string
+  uri: string[]
+  description: string
+}
+
+const roomsUri: RoomAndTitle[] = [
+  {
+    title: 'Living Room',
+    uri: ['/assets/rooms/living-room.jpg', '/assets/rooms/living-room2.jpg'],
+    description:
+      'An elegant, modernized room where you can relax, watch TV, or play games with your family or friends.',
+  },
+  {
+    title: 'Bed Room',
+    uri: ['/assets/rooms/bedroom1.jpg', '/assets/rooms/bedroom2.jpg'],
+    description:
+      "What makes for a good night's sleep? A warm and comfortable bed, a cold and relaxing environment, and a window that brightens up in the morning.",
+  },
+  {
+    title: 'Kitchen',
+    uri: ['/assets/rooms/kitchen.jpg'],
+    description:
+      "No utensils for cooking? Don't worry our kitchen is complete on set. A stove, refrigerator, cooking pan, and everything that you need!",
+  },
+  {
+    title: 'Kitchen',
+    uri: ['/assets/rooms/kitchen.jpg'],
+    description:
+      "No utensils for cooking? Don't worry our kitchen is complete on set. A stove, refrigerator, cooking pan, and everything that you need!",
+  },
+]
+
 type ContactUsForm = {
   name: string
   email: string
@@ -34,7 +67,7 @@ export default function Home() {
                   src={`/assets/landscape-carousel/${i}.jpg`}
                   alt="ming"
                   width={'100%'}
-                  height={[350, 450, 650, 794]}
+                  height={[350, 450, 650]}
                 />
               ))}
             loop={true}
@@ -46,7 +79,7 @@ export default function Home() {
             }}
           >
             <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-              <Flex alignItems={'center'} sx={{ width: [130, 220, 274] }}>
+              <Flex alignItems={'center'} sx={{ width: [130, 180, 220] }}>
                 <Button
                   style={{
                     borderRadius: 100,
@@ -61,7 +94,7 @@ export default function Home() {
                   activecolor={theme.colors.black70}
                 >
                   <Text.HeaderV2
-                    sx={{ color: theme.colors.white, fontSize: [12, 18, 24] }}
+                    sx={{ color: theme.colors.white, fontSize: [12, 16, 18] }}
                   >
                     BOOK NOW
                   </Text.HeaderV2>
@@ -79,15 +112,7 @@ export default function Home() {
             justifyContent: 'center',
           }}
         ></Section>
-        <Section
-          contentProps={{
-            flexDirection: 'row',
-            sx: { gap: 3 },
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-          }}
-          style={{ backgroundColor: theme.colors.black10 }}
-        ></Section>
+
         <Section
           title="Contact Us"
           contentProps={{
