@@ -5,6 +5,7 @@ export const theme = {
     black: '#000000',
     black90: 'rgba(0,0,0,0.9)',
     black80: 'rgba(0,0,0,0.8)',
+    black75: 'rgba(0,0,0,0.75)',
     black70: 'rgba(0,0,0,0.7)',
     black60: 'rgba(0,0,0,0.6)',
     black50: 'rgba(0,0,0,0.5)',

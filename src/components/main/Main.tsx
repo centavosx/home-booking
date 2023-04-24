@@ -33,7 +33,7 @@ export const Main = ({
             overflow: 'auto',
             width: '100%',
           }}
-          maxWidth={2250}
+          maxWidth={2000}
           alignSelf="center"
           backgroundColor={theme.colors.white}
         >
