@@ -23,7 +23,7 @@ export const Section = ({
       padding={26}
       width={'100%'}
       height={'100%'}
-      sx={{ gap: 4 }}
+      sx={{ gap: 3 }}
       {...other}
     >
       {!!title && (

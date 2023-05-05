@@ -29,7 +29,7 @@ const roomsUri: RoomAndTitle[] = [
     title: 'Bed Room',
     uri: ['/assets/rooms/bedroom1.jpg', '/assets/rooms/bedroom2.jpg'],
     description:
-      "What makes for a good night's sleep? A warm and comfortable bed, a cold and relaxing environment, and a window that brightens up in the morning.",
+      "What makes for a good night's sleep? A bed that is warm and cozy, a room that is cool and tranquil, and a window that offers views of the moon and the sun.",
   },
   {
     title: 'Kitchen',
@@ -38,10 +38,10 @@ const roomsUri: RoomAndTitle[] = [
       "No utensils for cooking? Don't worry our kitchen is complete on set. A stove, refrigerator, cooking pan, and everything that you need!",
   },
   {
-    title: 'Kitchen',
+    title: 'Dining Room',
     uri: ['/assets/rooms/kitchen.jpg'],
     description:
-      "No utensils for cooking? Don't worry our kitchen is complete on set. A stove, refrigerator, cooking pan, and everything that you need!",
+      'Enjoy meals in our relaxed and joyful atmosphere in our dinner room.',
   },
 ]
 
@@ -104,14 +104,36 @@ export default function Home() {
           </Carousel>
         </Flex>
         <Section
-          title="About Us"
+          title="Description"
           contentProps={{
-            flexDirection: 'row',
-            sx: { gap: 3 },
-            flexWrap: 'wrap',
-            justifyContent: 'center',
+            flexDirection: 'column',
+            sx: { gap: '21px' },
+            justifyContent: 'left',
+            alignItems: 'flex-start',
           }}
-        ></Section>
+        >
+          <Text.Description>
+            In Unit C6 Hampton Villa which is located in Barangay Sungay East,
+            4120 Tagaytay, Philippines. You, your family or friends can have an
+            affordable enjoyable vacation while also experiencing the beauty and
+            elegance of the village and nature.
+          </Text.Description>
+          {roomsUri.map((v, i) => (
+            <Flex sx={{ gap: 2, flexDirection: 'column' }} key={i}>
+              <Text.HeaderV2>{v.title}</Text.HeaderV2>
+              <Flex
+                justifyContent={'left'}
+                flexDirection={'row'}
+                sx={{ gap: 2, flexWrap: 'wrap' }}
+              >
+                {v.uri.map((img, i) => (
+                  <Image src={img} key={i} height={250} width={200} />
+                ))}
+              </Flex>
+              <Text.DescriptionV2>{v.description}</Text.DescriptionV2>
+            </Flex>
+          ))}
+        </Section>
 
         <Section
           title="Contact Us"
